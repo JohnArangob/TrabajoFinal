@@ -8,7 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     private Animator animator;
 
     public new Transform camera;
-    public float speed = 4;
+    public float speed = 2;
     public float gravity = -9.8f;
     //Start is called before the first frame update
     void Start()
