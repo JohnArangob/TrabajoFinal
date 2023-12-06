@@ -222,6 +222,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1989248786}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &124455391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2070727008701272073, guid: 19db65d7ce40b764aabf347783bb3fc5,
+    type: 3}
+  m_PrefabInstance: {fileID: 736264579787082459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166838256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,6 +616,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -658,7 +665,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 75
+  field of view: 41.8
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -684,13 +691,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.006475288, z: 0, w: 0.9999791}
-  m_LocalPosition: {x: -1.1745236, y: 5.83, z: -16.143589}
+  m_LocalRotation: {x: 0.36522385, y: -0.62718016, z: 0.33742478, w: 0.5995007}
+  m_LocalPosition: {x: 16.06, y: 16.62, z: -14.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 34.237, y: -90.264, z: 0.908}
+  m_LocalEulerAnglesHint: {x: 59.447, y: -96.04, z: -6.047}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +776,21 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8410719c1bf762429431002d7a7f398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 124455391}
+  offser: {x: 8.68, y: 14.4, z: -0.29}
+  cameraSpeed: 10
 --- !u!1001 &381568118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4801,8 +4823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a502268606b672f4b8055423d0834c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  distanciaLejana: 10
 --- !u!4 &1831327827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 496966, guid: 198a7384312e9d7418c7d2b63e402e12,

@@ -22,11 +22,10 @@ public class NewBehaviourScript : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         Vector3 movement = Vector3.zero;
-        float moventSpeed = 0;
+        float moveSpeed = 0;
 
-        //Vector3 Direction = new Vector3(horizontalInput, 0, verticalInput);
-
-        if (hor != 0 || ver != 0) {
+        if (hor != 0 || ver != 0)
+        {
             Vector3 forward = camera.forward;
             forward.y = 0;
             forward.Normalize();
@@ -35,18 +34,20 @@ public class NewBehaviourScript : MonoBehaviour
             right.y = 0;
             right.Normalize();
 
-            Vector3 Direction = forward * ver + right * hor;
-            moventSpeed = Mathf.Clamp01(Direction.magnitude);
-            Direction.Normalize();
-            movement = Direction * speed *moventSpeed* Time.deltaTime;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Direction), 0.1f);
+            Vector3 direction = forward * ver + right * hor;
+            moveSpeed = Mathf.Clamp01(direction.magnitude);
+            direction.Normalize();
+            movement = direction * speed * moveSpeed * Time.deltaTime;
+
+            // Ajusta la rotación solo si hay un cambio en la dirección
+            if (direction != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+            }
         }
 
         movement.y += gravity * Time.deltaTime;
         characterController.Move(movement);
-        animator.SetFloat("Xspeed", moventSpeed);
-        
+        animator.SetFloat("Xspeed", moveSpeed);
     }
-
-}
-
+    }
