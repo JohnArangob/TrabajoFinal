@@ -476,7 +476,7 @@ PrefabInstance:
     - target: {fileID: 2335841858386389217, guid: b660fa18cf1a9c1409cd020df82d7aac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2335841858386389217, guid: b660fa18cf1a9c1409cd020df82d7aac,
         type: 3}
@@ -4950,8 +4950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bottomRooms: []
   topRooms: []
-  leftRooms:
-  - {fileID: 7228567791152633729, guid: b78fd0a327a5aff42952e9b61b9aeab1, type: 3}
+  leftRooms: []
   rightRooms: []
 --- !u!4 &1896303870
 Transform:
@@ -5703,17 +5702,17 @@ PrefabInstance:
     - target: {fileID: 8505228034716962909, guid: 19db65d7ce40b764aabf347783bb3fc5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8505228034716962909, guid: 19db65d7ce40b764aabf347783bb3fc5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.66
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8505228034716962909, guid: 19db65d7ce40b764aabf347783bb3fc5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8505228034716962909, guid: 19db65d7ce40b764aabf347783bb3fc5,
         type: 3}
