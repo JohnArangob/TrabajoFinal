@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
-    public int width = 10; // Ancho del mapa en salas
-    public int height = 10; // Altura del mapa en salas
-    public GameObject roomPrefab; // Prefab de la sala
-    public Material wallMaterial; // Material de los muros
-    public Material floorMaterial; // Material del piso
+    [SerializeField]
+    int width = 10; // Ancho del mapa en salas
+
+    [SerializeField]
+    int height = 10; // Altura del mapa en salas
+
+    [SerializeField]
+    GameObject roomPrefab; // Prefab de la sala
+
+    [SerializeField]
+    Material wallMaterial; // Material de los muros
+
+    [SerializeField]
+    Material floorMaterial; // Material del piso
 
     void Start()
     {
@@ -21,13 +28,13 @@ public class MapGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                Vector3 position = new Vector3(x * 10, 0, y * 10); // Ajusta según el tamaño de tus salas
+                Vector3 position = new(x * 10, 0, y * 10); // Ajusta segï¿½n el tamaï¿½o de tus salas
                 GameObject room = Instantiate(roomPrefab, position, Quaternion.identity);
 
                 // Aplica las texturas a los muros y pisos
                 ApplyTextures(room);
 
-                // Añade lógica adicional según sea necesario, como la conexión de salas
+                // Aï¿½ade lï¿½gica adicional segï¿½n sea necesario, como la conexiï¿½n de salas
             }
         }
     }
@@ -55,4 +62,3 @@ public class MapGenerator : MonoBehaviour
         }
     }
 }
-

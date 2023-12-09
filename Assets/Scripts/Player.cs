@@ -1,21 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private CharacterController characterController;
     private Animator animator;
 
-    public new Transform camera;
-    public float speed = 2;
-    public float gravity = -9.8f;
+    [SerializeField]
+    new Transform camera;
+
+    [SerializeField]
+    float speed = 2;
+
+    [SerializeField]
+    float gravity = -9.8f;
+
     //Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,12 +42,16 @@ public class NewBehaviourScript : MonoBehaviour
             Vector3 direction = forward * ver + right * hor;
             moveSpeed = Mathf.Clamp01(direction.magnitude);
             direction.Normalize();
-            movement = direction * speed * moveSpeed * Time.deltaTime;
+            movement = moveSpeed * speed * Time.deltaTime * direction;
 
-            // Ajusta la rotación solo si hay un cambio en la dirección
+            // Ajusta la rotaciÃ³n solo si hay un cambio en la direcciÃ³n
             if (direction != Vector3.zero)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    Quaternion.LookRotation(direction),
+                    0.1f
+                );
             }
         }
 
@@ -50,4 +59,4 @@ public class NewBehaviourScript : MonoBehaviour
         characterController.Move(movement);
         animator.SetFloat("Xspeed", moveSpeed);
     }
-    }
+}
