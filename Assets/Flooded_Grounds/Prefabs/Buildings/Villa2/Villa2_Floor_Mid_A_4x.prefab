@@ -13,6 +13,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villa2_Floor_Mid_A_4x
       objectReference: {fileID: 0}
+    - target: {fileID: 4530151836353293204, guid: d1358ac6761d1604ca6bbf686ce4db97,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530151836353293204, guid: d1358ac6761d1604ca6bbf686ce4db97,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530151836353293204, guid: d1358ac6761d1604ca6bbf686ce4db97,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4530151836353442426, guid: d1358ac6761d1604ca6bbf686ce4db97,
         type: 3}
       propertyPath: m_LocalPosition.x
