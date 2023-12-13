@@ -8,6 +8,8 @@ public class CambioDeCamara : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+
+        camaraB.SetActive(false);
         if (other.gameObject.tag == "Player")
         {
             camaraA.SetActive(false);
@@ -16,13 +18,15 @@ public class CambioDeCamara : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        
-            if (other.gameObject.tag == "Player")
-            {
+
+
+        camaraB.SetActive(false);
+        if (other.gameObject.tag == "Player")
+        {
                 camaraA.SetActive(true);
                 camaraB.SetActive(false);
 
-            }
+        }
 
         
     }
